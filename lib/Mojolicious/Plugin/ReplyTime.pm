@@ -5,7 +5,13 @@ our $VERSION = '0.01';
 
 sub register {
   my ($self, $app) = @_;
-  $app->helper('reply.time' => sub { shift->render(text => scalar localtime) });
+
+  $app->helper('reply.time' => sub {
+    shift->respond_to(
+      html => {text => scalar localtime},
+      json => {json => {time => scalar localtime}},
+    );
+  });
 }
 
 1;
