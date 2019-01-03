@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+use Mojolicious::Lite;
+plugin 'ReplyTime';
+any('/' => sub { shift->reply->time });
+app->start('daemon', @ARGV);
+
+=encoding utf8
+
+=head1 NAME
+
+replytime - Quick time-replying web server
+
+=head1 SYNOPSIS
+
+  $ replytime --help
+
+=head1 DESCRIPTION
+
+List and run L<Mojolicious> commands as described in
+L<Mojolicious::Commands>.
+
+=head1 SEE ALSO
+
+L<Mojolicious>, L<Mojolicious::Guides>, L<https://mojolicious.org>.
+
+=cut
