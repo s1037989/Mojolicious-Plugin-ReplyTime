@@ -1,5 +1,5 @@
 # Mojolicious-Plugin-ReplyTime
 
-Send a simple response with just the current time
+Reply with a simple response of just the current time
 
 # Synopsis
