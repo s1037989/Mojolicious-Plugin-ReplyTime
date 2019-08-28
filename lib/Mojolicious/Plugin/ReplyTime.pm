@@ -21,7 +21,8 @@ __END__
 
 =head1 NAME
 
-Mojolicious::Plugin::ReplyTime - Mojolicious Plugin
+Mojolicious::Plugin::ReplyTime - Reply with a simple response of just the
+current time
 
 =head1 SYNOPSIS
 

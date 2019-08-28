@@ -1,7 +1,9 @@
 Changes
 lib/Mojolicious/Plugin/ReplyTime.pm
+LICENSE
 Makefile.PL
 MANIFEST                        This list of files
+MANIFEST.SKIP
 t/basic.t
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+README.md
+script/replytime

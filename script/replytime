@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!perl
 use Mojolicious::Lite;
 plugin 'ReplyTime';
 any('/' => sub { shift->reply->time });
@@ -13,6 +13,12 @@ replytime - Quick time-replying web server
 =head1 SYNOPSIS
 
   $ replytime --help
+
+  $ replytime
+  Server available at http://127.0.0.1:3000
+  ---
+  $ curl http://localhost:3000/
+  Thu Jan 01 00:00:00 1970
 
 =head1 DESCRIPTION
 
