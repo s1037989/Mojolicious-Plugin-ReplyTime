@@ -1,5 +1,6 @@
 ^\.(?!perltidyrc)
 .*\.old$
+.*\.bak$
 \.tar\.gz$
 ^Makefile$
 ^MYMETA\.
