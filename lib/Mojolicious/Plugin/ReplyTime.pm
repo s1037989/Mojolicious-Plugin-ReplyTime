@@ -1,7 +1,7 @@
 package Mojolicious::Plugin::ReplyTime;
 use Mojo::Base 'Mojolicious::Plugin';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub register {
   my ($self, $app) = @_;
@@ -11,6 +11,9 @@ sub register {
       html => {text => scalar localtime},
       json => {json => {time => scalar localtime}},
     );
+  });
+  $app->routes->get('/replytime')->to(cb => sub {
+    shift->reply->time
   });
 }
 
