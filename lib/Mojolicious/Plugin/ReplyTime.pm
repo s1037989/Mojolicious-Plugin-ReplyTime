@@ -35,9 +35,27 @@ current time
   # Mojolicious::Lite
   plugin 'ReplyTime';
 
+  # Demo
+  $ perl -Mojo -E 'plugin "ReplyTime"; app->start' routes
+  /replytime  GET  replytime
+  $ perl -Mojo -E 'plugin "ReplyTime"; app->start' get /replytime
+  Sat Nov 30 17:45:57 2019
+
 =head1 DESCRIPTION
 
-L<Mojolicious::Plugin::ReplyTime> is a L<Mojolicious> plugin.
+L<Mojolicious::Plugin::ReplyTime> is a L<Mojolicious> plugin that adds a
+reply helper named "time" to the Mojolicious controller object. It will
+respond to a JSON request with '{"time":"[scalar localtime]"}' and any other
+request with a plain text response of just the localtime as a scalar.
+
+Also included is a get route called /replytime that will call the
+reply->time helper.
+
+Also included is a C<replytime> command line utility which will launch a simple
+Mojolicious daemon that will respond to any request with the local time. The
+purpose for this is simply testing: rather than a static response in which you
+are unsure if the response is cached or not, reply time also responds with
+something fresh.
 
 =head1 METHODS
 
