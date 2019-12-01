@@ -8,7 +8,7 @@ WriteMakefile(
   VERSION_FROM => 'lib/Mojolicious/Plugin/ReplyTime.pm',
   ABSTRACT     => 'Reply with a simple response of just the current time',
   AUTHOR       => 'Stefan Adams <sadams@cpan.org>',
-  LICENSE      => '',
+  LICENSE      => 'artistic_2',
   META_MERGE   => {
     dynamic_config => 0,
     'meta-spec'    => {version => 2},
